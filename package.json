@@ -1,0 +1,33 @@
+{
+  "name": "tdd-starter-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "webpack-dev-server -w",
+    "e2e": "protractor",
+    "webdriver-manager": "webdriver-manager",
+    "test": "jasmine-ts"
+  },
+  "keywords": [],
+  "author": "Joe Staroba",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.7",
+    "@types/jasminewd2": "^2.0.3",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jasmine-ts": "^0.2.1",
+    "node-sass": "^4.9.0",
+    "protractor": "^5.3.2",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.9.0",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
