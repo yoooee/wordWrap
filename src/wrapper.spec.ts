@@ -24,7 +24,6 @@ describe('Wrapper', () => {
       if (breakPoint == -1)
         breakPoint = width;
       return s.substring(0, breakPoint) + '\n' + wrap(s.substring(breakPoint).trim(), width);
-}
-
+    }
   }
 });
