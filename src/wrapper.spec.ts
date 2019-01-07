@@ -11,6 +11,7 @@ describe('Wrapper', () => {
     assertWraps('xxx', 1, 'x\nx\nx');
     assertWraps('x x', 1, 'x\nx');
     assertWraps('x xx', 3, 'x\nxx');
+    assertWraps('four score and seven years ago our fathers brought forth upon this continent', 7, 'four\nscore\nand\nseven\nyears\nago our\nfathers\nbrought\nforth\nupon\nthis\ncontine\nnt');
   });
 
   const wrap = (s: string, width: number): string => {
