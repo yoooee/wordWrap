@@ -1,8 +1,12 @@
 describe('Wrapper', () => {
+  const assertWraps = (s: string, width: number, expected: string) => {
+    expect(expected).toEqual(wrap(s, width));
+  }
+
   it('should wrap', () => {
-    expect('').toEqual(wrap(null, 1));
-    expect('').toEqual(wrap('', 1));
-    expect('x').toEqual(wrap('x', 1));
+    assertWraps(null, 1, '');
+    assertWraps('', 1, '');
+    assertWraps('x', 1, 'x');
   });
 
   const wrap = (s: string, width: number): string => {
