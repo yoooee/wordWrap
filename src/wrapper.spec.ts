@@ -10,6 +10,7 @@ describe('Wrapper', () => {
     assertWraps('xx', 1, 'x\nx');
     assertWraps('xxx', 1, 'x\nx\nx');
     assertWraps('x x', 1, 'x\nx');
+    assertWraps('x xx', 3, 'x\nxx');
   });
 
   const wrap = (s: string, width: number): string => {
@@ -17,7 +18,12 @@ describe('Wrapper', () => {
       return '';
     if (s.length <= width)
       return s;
-    else
-      return s.substring(0, width) + '\n' + wrap(s.substring(width).trim(), width);
+    else {
+      let breakPoint: number = s.lastIndexOf(' ', width);
+      if (breakPoint == -1)
+        breakPoint = width;
+      return s.substring(0, breakPoint) + '\n' + wrap(s.substring(breakPoint).trim(), width);
+}
+
   }
 });
